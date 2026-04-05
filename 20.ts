@@ -12,9 +12,9 @@ function isValid(s: string): boolean {
   for (let i = 0; i < n; i++) {
     const c = s.charCodeAt(i);
 
-    if (c === 40) stack[top++] = 41;       // '(' -> expect ')'
-    else if (c === 91) stack[top++] = 93;  // '[' -> expect ']'
-    else if (c === 123) stack[top++] = 125; // '{' -> expect '}'
+    if (c === 40) stack[top++] = 41;       
+    else if (c === 91) stack[top++] = 93;  
+    else if (c === 123) stack[top++] = 125;
     else {
       if (top === 0 || stack[--top] !== c) return false;
     }
